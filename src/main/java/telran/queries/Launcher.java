@@ -12,6 +12,9 @@ import org.hibernate.jpa.HibernatePersistenceProvider;
 import jakarta.persistence.*;
 import jakarta.persistence.spi.PersistenceUnitInfo;
 public class Launcher {
+    static InputOutput io = new StandardInputOutput();
+    static EntityManager em;
+
     public static void main(String[] args) {
         createEntityManager();
         Item[] items = getItems();

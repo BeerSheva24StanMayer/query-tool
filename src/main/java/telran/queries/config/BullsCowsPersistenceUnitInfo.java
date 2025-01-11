@@ -10,9 +10,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 import jakarta.persistence.SharedCacheMode;
 import jakarta.persistence.ValidationMode;
-import jakarta.persistence.spi.ClassTransformer;
-import jakarta.persistence.spi.PersistenceUnitInfo;
-import jakarta.persistence.spi.PersistenceUnitTransactionType;
+import jakarta.persistence.spi.*;
 
 public class BullsCowsPersistenceUnitInfo implements PersistenceUnitInfo{
 
@@ -40,6 +38,7 @@ public class BullsCowsPersistenceUnitInfo implements PersistenceUnitInfo{
     public PersistenceUnitTransactionType getTransactionType() {
         return null;
     }
+
 
     @Override
     public DataSource getJtaDataSource() {
